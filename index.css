@@ -1,0 +1,130 @@
+html {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.content {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(87, 87, 87);
+}
+
+a:hover {
+    color: #919191;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:focus {
+    outline: none;
+    background-color: #3b8a3f;
+}
+
+.toolbox-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#toolbox {
+    position: absolute;
+}
+
+#toolbox::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+#toolbox .cancle {
+    position: relative;
+    background-color: rgb(77, 77, 77);
+    width: 15px;
+    height: 15px;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    -webkit-clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+    clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+}
+
+#toolbox .cancle:hover {
+    background-color: rgb(66, 66, 66);
+}
+
+#toolbox .cancle:active {
+    background-color: rgb(55, 55, 55);
+}
+
+#toolbox .boxItems {
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+#toolbox .boxItems li {
+    list-style: none;
+    padding: 10px;
+    background-color: rgb(235, 235, 235);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#toolbox .boxItems li:hover {
+    background-color: rgb(221, 221, 221);
+}
+
+#toolbox .boxItems li:active {
+    background-color: rgb(207, 207, 207);
+}
+
+#toolbox .boxItems li a {
+    color: rgb(87, 87, 87);
+    text-decoration: none;
+}
