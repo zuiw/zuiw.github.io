@@ -3,9 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>吴宇晨`s website</title>
 </head>
 <body>
-    <h1>hello</h1>
+    <h1 class="title">hello 这里是吴宇晨的个人网站</h1>
+
+    <div class="content">
+        <br>
+        <p>这是我的个人网站，欢迎访问</p>
+        <br><br>
+        <div class="synopsis">
+            我爱C++和编程，我也学过很多编程语言。
+            <br><br>
+            <a href="https://github.com/zuiw" target="_blank">我的GitHub</a>
+            <br>
+            <a href="https://gitee.com/xkktt" target="_blank">我的Gitee</a>
+            <br>
+            <a href="https://blog.csdn.net/Xiaokt_w?type=lately" target="_blank">我的CSDN</a>
+            <br>
+            <a href="https://www.luogu.com.cn/user/1114005">我的洛谷</a>
+        </div>
+    </div>
+
+    <button onclick="toolbox.showModal()" class="toolbox-button">工具箱</button>
+
+    <dialog id="toolbox">
+        <div class="cancle" onclick="toolbox.close()"></div>
+        <div class="boxItems">
+            <li class="url"><a href="src/url/index.html">网址</a></li>
+            <li class="tools"><a href="src/tools/index.html">工具</a></li>
+            <li class="download"><a href="src/download/index.html">下载</a></li>
+        </div>
+    </dialog>
+
+    <div class="footer">
+        <p>版权所有 &copy; 2024 个人网站</p>
+        <p>作者：吴宇晨</p>
+        <p>联系方式：lvyan740826@163.com</p>
+        <p>地址：中国·辽宁·沈阳</p>
+        <style>
+            .footer {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                height: 120px;
+                background-color: #ccc6c6;
+                padding: 10px;
+                text-align: center;
+            }
+            
+            .footer p {
+                margin-top: 5px;
+                margin-bottom: 5px;
+                font-size: 14px;
+            }
+        </style>
+    </div>
 </body>
 </html>
