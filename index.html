@@ -1,41 +1,419 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>吴宇晨`s website</title>
+    <title>吴宇晨`s website · 网址</title>
+    <link rel="stylesheet" href="./../../index.css">
+    <style>
+        html {
+            overflow-y: scroll;
+        }
+
+        .container {
+            height: 100%;
+            position: relative;
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-bottom: 280px;
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .container h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .container p {
+            display: inline-table;
+            text-align: center;
+            position: relative;
+            margin-left: 5px;
+            margin-right: 5px;
+            font-size: large;
+        }
+
+        .program {
+            position: relative;
+            top: 50px;
+            width: 100%;
+            height: calc(100%);
+            border: #000000 5px solid;
+            border-radius: 10px;
+        }
+
+        .program-info {
+            position: relative;
+            top: 20px;
+            margin-left: 50px;
+            width: calc(100% - 105px);
+            height: 100%;
+            border: #000000 5px solid;
+            border-radius: 10px;
+        }
+
+        .program-lang {
+            position: relative;
+            top: 0;
+            margin-top: 60px;
+            margin-left: 50px;
+            margin-bottom: 50px;
+            width: calc(100% - 105px);
+            height: 100%;
+            border: #000000 5px solid;
+            border-radius: 10px;
+        }
+        
+        .program-website {
+            position: relative;
+            top: 0;
+            margin-top: 60px;
+            margin-left: 50px;
+            margin-bottom: 50px;
+            width: calc(100% - 105px);
+            height: 100%;
+            border: #000000 5px solid;
+            border-radius: 10px;
+        }
+
+        .program-editor {
+            position: relative;
+            top: 0;
+            margin-top: 60px;
+            margin-left: 50px;
+            margin-bottom: 50px;
+            width: calc(100% - 105px);
+            height: 100%;
+            border: #000000 5px solid;
+            border-radius: 10px;
+        }
+
+        .game {
+            position: relative;
+            top: 50px;
+            width: 100%;
+            height: calc(100%);
+            margin-top: 60px;
+            border: #000000 5px solid;
+            border-radius: 10px;
+        }
+
+        .game-platform {
+            position: relative;
+            top: 0;
+            margin-top: 60px;
+            margin-left: 50px;
+            margin-bottom: 50px;
+            width: calc(100% - 105px);
+            height: 100%;
+            border: #000000 5px solid;
+            border-radius: 10px;
+        }
+
+        .game-engine {
+            position: relative;
+            top: 0;
+            margin-top: 60px;
+            margin-left: 50px;
+            margin-bottom: 50px;
+            width: calc(100% - 105px);
+            height: 100%;
+            border: #000000 5px solid;
+            border-radius: 10px;
+        }
+
+        .game-officialWebsite {
+            position: relative;
+            top: 0;
+            margin-top: 60px;
+            margin-left: 50px;
+            margin-bottom: 50px;
+            width: calc(100% - 105px);
+            height: 100%;
+            border: #000000 5px solid;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1 class="title">hello 这里是吴宇晨的个人网站</h1>
+    <button style="position: relative; top: 20px; left: 40px;" onclick="window.location.href = '../../index.html'">返回</button>
 
-    <div class="content">
-        <br>
-        <p>这是我的个人网站，欢迎访问</p>
-        <br><br>
-        <div class="synopsis">
-            我爱C++和编程，我也学过很多编程语言。
-            <br><br>
-            <a href="https://github.com/zuiw" target="_blank">我的GitHub</a>
-            <br>
-            <a href="https://gitee.com/xkktt" target="_blank">我的Gitee</a>
-            <br>
-            <a href="https://blog.csdn.net/Xiaokt_w?type=lately" target="_blank">我的CSDN</a>
-            <br>
-            <a href="https://www.luogu.com.cn/user/1114005">我的洛谷</a>
+    <p style="position: relative; top: 20px; left: 80%; display: inline;">可以用<b>ctrl+f</b>寻找</p>
+
+    <div class="container">
+
+        <div class="program">
+            <h2>编程</h2>
+
+            <div class="program-info">
+
+                <h3>编程资料</h3>
+
+                <p>1.github <a href="https://github.com" target="_blank">https://github.com</a>
+                <p>2.gitlab <a href="https://gitlab.com" target="_blank">https://gitlab.com</a></p>
+                <p>3.stackoverflow <a href="https://stackoverflow.com" target="_blank">https://stackoverflow.com</a></p>
+                <p>4.csdn <a href="https://blog.csdn.net/" target="_blank">https://blog.csdn.net/</a></p>
+                <p>5.博客园 <a href="https://www.cnblogs.com/" target="_blank">https://www.cnblogs.com/</a></p>
+                <p>6.知乎 <a href="https://www.zhihu.com/" target="_blank">https://www.zhihu.com/</a></p>
+                <p>7.开源中国 <a href="https://www.oschina.net/" target="_blank">https://www.oschina.net/</a></p>
+                <p>8.菜鸟教程 <a href="https://www.runoob.com/" target="_blank">https://www.runoob.com/</a></p>
+                <p>9.MDN <a href="https://developer.mozilla.org/" target="_blank">https://developer.mozilla.org/</a></p>
+                <p>10.SF思否 <a href="https://segmentfault.com/" target="_blank">https://segmentfault.com/</a></p>
+                <p>11.Gitee <a href="https://gitee.com/" target="_blank">https://gitee.com/</a></p>
+                <p>12.掘金 <a href="https://juejin.cn/" target="_blank">https://juejin.cn/</a></p>
+                <p>13.简书 <a href="https://www.jianshu.com/" target="_blank">https://www.jianshu.com/</a></p>
+                <p>14.LeetCode <a href="https://leetcode.cn/" target="_blank">https://leetcode.cn/</a></p>
+                <p>15.牛客网 <a href="https://www.nowcoder.com/" target="_blank">https://www.nowcoder.com/</a></p>
+                <p>16.洛谷 <a href="https://www.luogu.com.cn/" target="_blank">https://www.luogu.com.cn/</a></p>
+                <p>17.codeforces <a href="https://codeforces.com/" target="_blank">https://codeforces.com/</a></p>
+                <p>18.codeWars <a href="https://www.codewars.com/" target="_blank">https://www.codewars.com/</a></p>
+                <p>19.IT之家 <a href="https://www.ithome.com/" target="_blank">https://www.ithome.com/</a></p>
+                <p>20.Microsoft Learn <a href="https://learn.microsoft.com/zh-cn/" target="_blank">https://learn.microsoft.com/zh-cn/</a></p>
+                <p>21.freeCodeCamp <a href="https://www.freecodecamp.org/" target="_blank">https://www.freecodecamp.org/</a></p>
+                <p>22.sourseWare <a href="https://www.sourceware.org/" target="_blank">https://www.sourceware.org/</a></p>
+                <p>23.V2EX <a href="https://www.v2ex.com/" target="_blank">https://www.v2ex.com/</a></p>
+
+            </div>
+
+            <div class="program-lang">
+
+                <h3>编程语言</h3>
+
+                <p>1.C++ <a href="https://www.cplusplus.com/" target="_blank">https://www.cplusplus.com/</a></p>
+                <p>2.C <a href="https://www.cprogramming.com/" target="_blank">https://www.cprogramming.com/</a></p>
+                <p>3.Java <a href="https://www.java.com/" target="_blank">https://www.java.com/</a></p>
+                <p>4.Python <a href="https://www.python.org/" target="_blank">https://www.python.org/</a></p>
+                <p>5.JavaScript <a href="https://www.javascript.com/" target="_blank">https://www.javascript.com/</a></p>
+                <p>6.PHP <a href="https://www.php.net/" target="_blank">https://www.php.net/</a></p>
+                <p>7.Ruby <a href="https://www.ruby-lang.org/" target="_blank">https://www.ruby-lang.org/</a></p>
+                <p>8.Go <a href="https://golang.org/" target="_blank">https://golang.org/</a></p>
+                <p>9.Kotlin <a href="https://kotlinlang.org/" target="_blank">https://kotlinlang.org/</a></p>
+                <p>10.Swift <a href="https://swift.org/" target="_blank">https://swift.org/</a></p>
+                <p>11.lisp <a href="https://www.lisp.org/" target="_blank">https://www.lisp.org/</a></p>
+                <p>12.R <a href="https://www.r-project.org/" target="_blank">https://www.r-project.org/</a></p>
+                <p>13.Rust <a href="https://www.rust-lang.org/" target="_blank">https://www.rust-lang.org/</a></p>
+                <p>14.Scala <a href="https://www.scala-lang.org/" target="_blank">https://www.scala-lang.org/</a></p>
+                <p>15.Haskell <a href="https://www.haskell.org/" target="_blank">https://www.haskell.org/</a></p>
+                <p>16.Perl <a href="https://www.perl.org/" target="_blank">https://www.perl.org/</a></p>
+                <p>17.Julia <a href="https://julialang.org/" target="_blank">https://julialang.org/</a></p>
+                <p>18.Lua <a href="https://www.lua.org/" target="_blank">https://www.lua.org/</a></p>
+                <p>19.Dart <a href="https://dart.dev/" target="_blank">https://dart.dev/</a></p>
+                <p>20.Racket <a href="https://racket-lang.org/" target="_blank">https://racket-lang.org/</a></p>
+                <p>21.C-sharp <a href="https://www.c-sharpcorner.com/" target="_blank">https://www.c-sharpcorner.com/</a></p>
+                <p>22.TypeScript <a href="https://www.typescriptlang.org/" target="_blank">https://www.typescriptlang.org/</a></p>
+                <p>23.Assembly <a href="https://www.intel.com/content/www/us/en/developer/assembler.html" target="_blank">https://www.intel.com/content/www/us/en/developer/assembler.html</a></p>
+                <p>24.Verilog <a href="https://www.verilog.com/" target="_blank">https://www.verilog.com/</a></p>
+                <p>25.VHDL <a href="https://www.vhdl.com/" target="_blank">https://www.vhdl.com/</a></p>
+                <p>26.V <a href="https://www.v-language.org/" target="_blank">https://www.v-language.org/</a></p>
+                <p>27.Pascal <a href="https://www.freepascal.org/" target="_blank">https://www.freepascal.org/</a></p>
+                <p>28.Basic <a href="https://www.basic-conversion.com/" target="_blank">https://www.basic-conversion.com/</a></p>
+                <p>29.COBOL <a href="https://www.cobol.com/" target="_blank">https://www.cobol.com/</a></p>
+                <p>30.FORTRAN <a href="https://www.fortran.com/" target="_blank">https://www.fortran.com/</a></p>
+                <p>31.Visual Basic <a href="https://www.visualbasic.com/" target="_blank">https://www.visualbasic.com/</a></p>
+                <p>32.Visual Basic Script <a href="https://www.visualbasic.com/scripting/" target="_blank">https://www.visualbasic.com/scripting/</a></p>
+                <p>33.Visual Basic for Applications <a href="https://www.visualbasic.com/vba/" target="_blank">https://www.visualbasic.com/vba/</a></p>
+                <p>34. .net <a href="https://www.microsoft.com/net/download" target="_blank">https://www.microsoft.com/net/download</a></p>
+                <p>35.f-sharp <a href="https://www.fsharp.org/" target="_blank">https://www.fsharp.org/</a></p>
+                <p>36.ocaml <a href="https://ocaml.org/" target="_blank">https://ocaml.org/</a></p>
+                <p>37.MySQL <a href="https://www.mysql.com/" target="_blank">https://www.mysql.com/</a></p>
+                <p>38.SQLite <a href="https://www.sqlite.org/" target="_blank">https://www.sqlite.org/</a></p>
+                <p>39.PostgreSQL <a href="https://www.postgresql.org/" target="_blank">https://www.postgresql.org/</a></p>
+                <p>40.MongoDB <a href="https://www.mongodb.com/" target="_blank">https://www.mongodb.com/</a></p>
+                <p>41.Redis <a href="https://redis.io/" target="_blank">https://redis.io/</a></p>
+                <p>42.Elasticsearch <a href="https://www.elastic.co/" target="_blank">https://www.elastic.co/</a></p>
+                <p>43.MariaDB <a href="https://mariadb.org/" target="_blank">https://mariadb.org/</a></p>
+                <p>44.SQL Server <a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads" target="_blank">https://www.microsoft.com/en-us/sql-server/sql-server-downloads</a></p>
+                <p>45.Oracle <a href="https://www.oracle.com/database/technologies/index.html" target="_blank">https://www.oracle.com/database/technologies/index.html</a></p>
+                <p>46.HTML <a href="https://www.w3schools.com/html/" target="_blank">https://www.w3schools.com/html/</a></p>
+                <p>47.CSS <a href="https://www.w3schools.com/css/" target="_blank">https://www.w3schools.com/css/</a></p>
+                <p>48.Shell <a href="https://www.shellscript.sh/" target="_blank">https://www.shellscript.sh/</a></p>
+                <p>49.Matlab <a href="https://www.mathworks.com/products/matlab.html" target="_blank">https://www.mathworks.com/products/matlab.html</a></p>
+                <p>50.Mathematica <a href="https://www.wolfram.com/mathematica/" target="_blank">https://www.wolfram.com/mathematica/</a></p>
+
+            </div>
+
+            <div class="program-website">
+
+                <h3>做题网站</h3>
+
+                <p>1.牛童信奥 <a href="http://43.138.106.53/home" target="_blank">http://43.138.106.53/home</a></p>
+                <p>2.洛谷 <a href="https://www.luogu.com.cn/" target="_blank">https://www.luogu.com.cn/</a></p>
+                <p>3.Codeforces <a href="https://codeforces.com/" target="_blank">https://codeforces.com/</a></p>
+                <p>4.LeetCode <a href="https://leetcode.cn/" target="_blank">https://leetcode.cn/</a></p>
+                <p>5.AtCoder <a href="https://atcoder.jp/" target="_blank">https://atcoder.jp/</a></p>
+                <p>6.Codility <a href="https://app.codility.com/programmers/" target="_blank">https://app.codility.com/programmers/</a></p>
+                <p>7.HackerRank <a href="https://www.hackerrank.com/" target="_blank">https://www.hackerrank.com/</a></p>
+                <p>8.TopCoder <a href="https://www.topcoder.com/" target="_blank">https://www.topcoder.com/</a></p>
+                <p>9.CodeChef <a href="https://www.codechef.com/" target="_blank">https://www.codechef.com/</a></p>
+                <p>10.Kattis <a href="https://open.kattis.com/" target="_blank">https://open.kattis.com/</a></p>
+                <p>11.UVa <a href="https://uva.onlinejudge.org/" target="_blank">https://uva.onlinejudge.org/</a></p>
+                <p>12.Virtual Judge <a href="https://vjudge.net/" target="_blank">https://vjudge.net/</a></p>
+                <p>13.poj <a href="https://poj.org/" target="_blank">https://poj.org/</a></p>
+                <p>14.zoj <a href="https://acm.zju.edu.cn/home/" target="_blank">https://acm.zju.edu.cn/home/</a></p>
+                <p>15.LintCode <a href="https://www.lintcode.com/" target="_blank">https://www.lintcode.com/</a></p>
+
+            </div>
+
+            <div class="program-editor">
+
+                <h3>代码编辑器和IDE</h3>
+
+                <p>1.VScode <a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a></p>
+                <p>2.Vim <a href="https://www.vim.org/" target="_blank">https://www.vim.org/</a></p>
+                <p>3.Sublime <a href="https://www.sublimetext.com/" target="_blank">https://www.sublimetext.com/</a></p>
+                <p>4.Atom <a href="https://atom.io/" target="_blank">https://atom.io/</a></p>
+                <p>5.Eclipse <a href="https://www.eclipse.org/" target="_blank">https://www.eclipse.org/</a></p>
+                <p>6.DevC++ <a href="https://www.devcpu.com/devcpp/" target="_blank">https://www.devcpu.com/devcpp/</a></p>
+                <p>7.CodeBlocks <a href="https://www.codeblocks.org/" target="_blank">https://www.codeblocks.org/</a></p>
+                <p>8.Code::Blocks <a href="https://www.codegeex.cn/" target="_blank">https://www.codegeex.cn/</a></p>
+                <p>9.VS <a href="https://visualstudio.microsoft.com/zh-hans/vs/" target="_blank">https://visualstudio.microsoft.com/zh-hans/vs/</a></p>
+                <p>10.Xcode <a href="https://developer.apple.com/xcode/" target="_blank">https://developer.apple.com/xcode/</a></p>
+                <p>11.Android Studio <a href="https://developer.android.com/studio" target="_blank">https://developer.android.com/studio</a></p>
+                <p>12.IDEA <a href="https://www.jetbrains.com/idea/" target="_blank">https://www.jetbrains.com/idea/</a></p>
+                <p>13.CLion <a href="https://www.jetbrains.com/clion/" target="_blank">https://www.jetbrains.com/clion/</a></p>
+                <p>14.PyCharm <a href="https://www.jetbrains.com/pycharm/" target="_blank">https://www.jetbrains.com/pycharm/</a></p>
+                <p>15.WebStorm <a href="https://www.jetbrains.com/webstorm/" target="_blank">https://www.jetbrains.com/webstorm/</a></p>
+                <p>16.DataGrip <a href="https://www.jetbrains.com/datagrip/" target="_blank">https://www.jetbrains.com/datagrip/</a></p>
+                <p>17.Rider <a href="https://www.jetbrains.com/rider/" target="_blank">https://www.jetbrains.com/rider/</a></p>
+                <p>18.AppCode <a href="https://www.jetbrains.com/objc/" target="_blank">https://www.jetbrains.com/objc/</a></p>
+                <p>19.PhpStorm <a href="https://www.jetbrains.com/phpstorm/" target="_blank">https://www.jetbrains.com/phpstorm/</a></p>
+                <p>20.GoLand <a href="https://www.jetbrains.com/go/" target="_blank">https://www.jetbrains.com/go/</a></p>
+                <p>21.RubyMine <a href="https://www.jetbrains.com/ruby/" target="_blank">https://www.jetbrains.com/ruby/</a></p>
+                <p>22.RustRover <a href="https://www.jetbrains.com/rust/" target="_blank">https://www.jetbrains.com/rust/</a></p>
+                <p>24.Aqua <a href="https://www.jetbrains.com/aqua/" target="_blank">https://www.jetbrains.com/aqua/</a></p>
+                <p>25.ReSharper <a href="https://www.jetbrains.com/resharper/" target="_blank">https://www.jetbrains.com/resharper/</a></p>
+                <p>26.Fleet <a href="https://www.jetbrains.com/fleet/" target="_blank">https://www.jetbrains.com/fleet/</a></p>
+                <p>27.Lightly <a href="https://lightly.teamcode.com/" target="_blank">https://lightly.teamcode.com/</a></p>
+                <p>28.Emacs <a href="https://www.gnu.org/software/emacs/" target="_blank">https://www.gnu.org/software/emacs/</a></p>
+                <p>29.Notepad++ <a href="https://notepad-plus-plus.org/" target="_blank">https://notepad-plus-plus.org/</a></p>
+                <p>30.Notepad2 <a href="https://www.donationcoder.com/Software/Notepad2/index.html" target="_blank">https://www.donationcoder.com/Software/Notepad2/index.html</a></p>
+                <p>31.Notepad3 <a href="https://www.flosch.de/notepad3/index.html" target="_blank">https://www.flosch.de/notepad3/index.html</a></p>
+                <p>32.HBuilderX <a href="https://www.dcloud.io/hbuilderx.html" target="_blank">https://www.dcloud.io/hbuilderx.html</a></p>
+                <p>33.小熊猫C++ <a href="https://www.xiaopandao.com/cpp/" target="_blank">https://www.xiaopandao.com/cpp/</a></p>
+                <p>34.Embarcadero Dev-C++ <a href="https://www.embarcadero.com/products/dev-cpp" target="_blank">https://www.embarcadero.com/products/dev-cpp</a></p>
+                <p>35.CodeLite <a href="https://codelite.org/" target="_blank">https://codelite.org/</a></p>
+                <p>36.C++ Builder <a href="https://www.embarcadero.com/products/cbuilder" target="_blank">https://www.embarcadero.com/products/cbuilder</a></p>
+                <p>37.Thonny <a href="https://thonny.org/" target="_blank">https://thonny.org/</a></p>
+                <p>38.deveco-studio <a href="https://www.deveco.com/products/deveco-studio/" target="_blank">https://www.deveco.com/products/deveco-studio/</a></p>
+                <p>39.LightTable <a href="https://lighttable.com/" target="_blank">https://lighttable.com/</a></p>
+                <p>40.Geany <a href="https://www.geany.org/" target="_blank">https://www.geany.org/</a></p>
+                <p>41.KDevelop <a href="https://www.kdevelop.org/" target="_blank">https://www.kdevelop.org/</a></p>
+                <p>42.Mu <a href="https://www.moolenaar.net/mu/" target="_blank">https://www.moolenaar.net/mu/</a></p>
+                <p>43.R <a href="https://www.r-project.org/" target="_blank">https://www.r-project.org/</a></p>
+                <p>44.RStudio <a href="https://www.rstudio.com/" target="_blank">https://www.rstudio.com/</a></p>
+                <p>45.Rodeo <a href="https://www.yhat.com/products/rodeo" target="_blank">https://www.yhat.com/products/rodeo</a></p>
+                <p>46.RStudio Server <a href="https://www.rstudio.com/products/rstudio-server/" target="_blank">https://www.rstudio.com/products/rstudio-server/</a></p>
+                <p>47.RStudio Cloud <a href="https://rstudio.cloud/" target="_blank">https://rstudio.cloud/</a></p>
+                <p>48.RStudio Desktop <a href="https://www.rstudio.com/products/rstudio-desktop/" target="_blank">https://www.rstudio.com/products/rstudio-desktop/</a></p>
+                <p>49.UEStudio <a href="https://www.unisoc.com/zh-cn/products/ue-studio" target="_blank">https://www.unisoc.com/zh-cn/products/ue-studio</a></p>
+                <p>50.Bluefish <a href="https://bluefish.openoffice.nl/" target="_blank">https://bluefish.openoffice.nl/</a></p>
+                <p>51.x-studio <a href="https://www.x-studio.com/" target="_blank">https://www.x-studio.com/</a></p>
+                <p>52.x-studio Pro <a href="https://www.x-studio.com/zh-cn/product/x-studio-pro" target="_blank">https://www.x-studio.com/zh-cn/product/x-studio-pro</a></p>
+                <p>53.Komodo Edit <a href="https://www.activestate.com/products/komodo-edit/" target="_blank">https://www.activestate.com/products/komodo-edit/</a></p>
+                <p>54.Komodo IDE <a href="https://www.activestate.com/products/komodo-ide/" target="_blank">https://www.activestate.com/products/komodo-ide/</a></p>
+                <p>55.jEdit <a href="https://www.jedit.org/" target="_blank">https://www.jedit.org/</a></p>
+                <p>56.Aptana Studio <a href="https://www.aptana.com/" target="_blank">https://www.aptana.com/</a></p>
+                <p>57.NetBeans <a href="https://netbeans.org/" target="_blank">https://netbeans.org/</a></p>
+                <p>58.BlueGriffon <a href="https://bluegriffon.org/" target="_blank">https://bluegriffon.org/</a></p>
+                <p>59.CoffeeCup Free HTML editor <a href="https://www.coffeecup.com/free-html-editor.html" target="_blank">https://www.coffeecup.com/free-html-editor.html</a></p>
+                <p>60.CoffeeCup HTML Editor <a href="https://www.coffeecup.com/html-editor.html" target="_blank">https://www.coffeecup.com/html-editor.html</a></p>
+                <p>61.KompoZer <a href="https://kompozer.net/" target="_blank">https://kompozer.net/</a></p>
+                <p>62.Windows PowerShell ISE <a href="https://learn.microsoft.com/en-us/powershell/scripting/windows-powershell-ise" target="_blank">https://learn.microsoft.com/en-us/powershell/scripting/windows-powershell-ise</a></p>
+                <p>63.Windows PowerShell ISE (x86) <a href="https://learn.microsoft.com/en-us/powershell/scripting/windows-powershell-ise" target="_blank">https://learn.microsoft.com/en-us/powershell/scripting/windows-powershell-ise</a></p>
+                <p>64.IDLE <a href="https://www.python.org/downloads/source/" target="_blank">https://www.python.org/downloads/source/</a></p>
+
+            </div>
+        </div>
+
+        <div class="game">
+
+            <h2>游戏</h2>
+
+            <div class="game-platform">
+
+                <h3>游戏平台</h3>
+
+                <p>0.4399 <a href="https://www.4399.com/" target="_blank">https://www.4399.com/</a></p>
+                <p>1.Steam <a href="https://store.steampowered.com/" target="_blank">https://store.steampowered.com/</a></p>
+                <p>2.Epic Games <a href="https://www.epicgames.com/" target="_blank">https://www.epicgames.com/</a></p>
+                <p>3.GOG <a href="https://www.gog.com/" target="_blank">https://www.gog.com/</a></p>
+                <p>4.Origin <a href="https://www.origin.com/" target="_blank">https://www.origin.com/</a></p>
+                <p>5.Ubisoft Connect <a href="https://connect.ubi.com/" target="_blank">https://connect.ubi.com/</a></p>    
+                <p>6.Microsoft Store <a href="https://www.microsoft.com/zh-cn/store/top-paid/games" target="_blank">https://www.microsoft.com/zh-cn/store/top-paid/games</a></p>
+                <p>7.Microsoft Store (x86) <a href="https://www.microsoft.com/zh-cn/store/top-paid/games" target="_blank">https://www.microsoft.com/zh-cn/store/top-paid/games</a></p>
+                <p>8.Wegame <a href="https://www.wegame.com.cn/" target="_blank">https://www.wegame.com.cn/</a></p>
+                <p>9.itch.io <a href="https://itch.io/" target="_blank">https://itch.io/</a></p>
+                <p>10.EA <a href="https://www.ea.com/zh-cn/games" target="_blank">https://www.ea.com/zh-cn/games</a></p>
+                <p>11.Battle <a href="https://www.battlenet.com.cn/zh/game/overwatch" target="_blank">https://www.battlenet.com.cn/zh/game/overwatch</a></p>
+                <p>12.Xbox <a href="https://www.xbox.com/zh-cn/games" target="_blank">https://www.xbox.com/zh-cn/games</a></p>
+                <p>13.PlayStation <a href="https://store.playstation.com/zh-hans-cn/explore/" target="_blank">https://store.playstation.com/zh-hans-cn/explore/</a></p>
+                <p>14.Nintendo Switch <a href="https://www.nintendo.com.cn/switch/" target="_blank">https://www.nintendo.com.cn/switch/</a></p>
+                <p>15.Nintendo 3DS <a href="https://www.nintendo.com.cn/3ds/" target="_blank">https://www.nintendo.com.cn/3ds/</a></p>
+                <p>16.Nintendo DS <a href="https://www.nintendo.com.cn/ds/" target="_blank">https://www.nintendo.com.cn/ds/</a></p>
+                <p>17.Stadia <a href="https://stadia.google.com/" target="_blank">https://stadia.google.com/</a></p>
+                <p>18.Bethesda <a href="https://bethesda.net/zh-hans/games" target="_blank">https://bethesda.net/zh-hans/games</a></p>
+
+            </div>
+
+            <div class="game-engine">
+
+                <h3>游戏引擎</h3>
+
+                <p>1.Unity <a href="https://unity.com/" target="_blank">https://unity.com/</a></p>
+                <p>2.Unreal Engine <a href="https://www.unrealengine.com/" target="_blank">https://www.unrealengine.com/</a></p>
+                <p>3.CryEngine <a href="https://www.cryengine.com/" target="_blank">https://www.cryengine.com/</a></p>
+                <p>4.GameMaker <a href="https://www.yoyogames.com/game-maker" target="_blank">https://www.yoyogames.com/game-maker</a></p>
+                <p>5.Cocos <a href="https://www.cocos.com/" target="_blank">https://www.cocos.com/</a></p>
+                <p>6.Godot <a href="https://godotengine.org/" target="_blank">https://godotengine.org/</a></p>
+                <p>7.LÖVE <a href="https://love2d.org/" target="_blank">https://love2d.org/</a></p>
+                <p>8.Haxe <a href="https://haxe.org/" target="_blank">https://haxe.org/</a></p>
+                <p>9.RPG Maker <a href="https://www.rpgmakerweb.com/" target="_blank">https://www.rpgmakerweb.com/</a></p>
+                <p>10.Source Engine <a href="https://www.sourceengine.net/" target="_blank">https://www.sourceengine.net/</a></p>
+                <p>11.LayaAir <a href="https://ldc.layabox.com/laya/layaAir/LayaAir.html" target="_blank">https://ldc.layabox.com/laya/layaAir/LayaAir.html</a></p>
+                <p>12.Frostbite <a href="https://www.ea.com/zh-cn/games/frostbite" target="_blank">https://www.ea.com/zh-cn/games/frostbite</a></p>
+                <p>13.IW Engine <a href="https://www.moddb.com/engines/iw-engine" target="_blank">https://www.moddb.com/engines/iw-engine</a></p>
+
+            </div>
+
+            <div class="game-officialWebsite">
+
+                <h3>游戏官网</h3>
+
+                <p>1.绝地求生 <a href="https://play.pubg.com.cn/" target="_blank">https://play.pubg.com.cn/</a></p>
+                <p>2.荒野行动 <a href="https://www.hw.com/game/hwact" target="_blank">https://www.hw.com/game/hwact</a></p>
+                <p>3.荒野大镖客2 <a href="https://www.rockstargames.com/zh-cn/games/red-dead-redemption-2" target="_blank">https://www.rockstargames.com/zh-cn/games/red-dead-redemption-2</a></p>
+                <p>4.荒野大镖客 <a href="https://www.rockstargames.com/zh-cn/games/red-dead-redemption" target="_blank">https://www.rockstargames.com/zh-cn/games/red-dead-redemption</a></p>
+                <p>5.荒野大镖客：救赎 <a href="https://www.rockstargames.com/zh-cn/games/red-dead-redemption-2" target="_blank">https://www.rockstargames.com/zh-cn/games/red-dead-redemption-2</a></p>
+                <p>6.荒野大镖客：救赎2 <a href="https://www.rockstargames.com/zh-cn/games/red-dead-redemption-2" target="_blank">https://www.rockstargames.com/zh-cn/games/red-dead-redemption-2</a></p>
+                <p>7.GTA5 <a href="https://www.rockstargames.com/zh-cn/games/grand-theft-auto-v" target="_blank">https://www.rockstargames.com/zh-cn/games/grand-theft-auto-v</a></p>
+                <p>8.使命召唤·战区 <a href="https://www.callofduty.com.cn/zh-hans/cod/warzone" target="_blank">https://www.callofduty.com.cn/zh-hans/cod/warzone</a></p>
+                <p>9.使命召唤：黑色行动4 <a href="https://www.callofduty.com.cn/zh-hans/cod/black-ops-4" target="_blank">https://www.callofduty.com.cn/zh-hans/cod/black-ops-4</a></p>
+                <p>10.使命召唤：黑色行动3 <a href="https://www.callofduty.com.cn/zh-hans/cod/black-ops-3" target="_blank">https://www.callofduty.com.cn/zh-hans/cod/black-ops-3</a></p>
+                <p>11.使命召唤：黑色行动2 <a href="https://www.callofduty.com.cn/zh-hans/cod/black-ops-2" target="_blank">https://www.callofduty.com.cn/zh-hans/cod/black-ops-2</a></p>
+                <p>12.使命召唤：黑色行动 <a href="https://www.callofduty.com.cn/zh-hans/cod/black-ops" target="_blank">https://www.callofduty.com.cn/zh-hans/cod/black-ops</a></p>
+                <p>13.使命召唤：现代战争3 <a href="https://www.callofduty.com.cn/zh-hans/cod/modern-warfare-3" target="_blank">https://www.callofduty.com.cn/zh-hans/cod/modern-warfare-3</a></p>
+                <p>14.使命召唤：现代战争2 <a href="https://www.callofduty.com.cn/zh-hans/cod/modern-warfare-2" target="_blank">https://www.callofduty.com.cn/zh-hans/cod/modern-warfare-2</a></p>
+                <p>15.原神 <a href="https://genshin.honeyhunterworld.com/zh-cn/" target="_blank">https://genshin.honeyhunterworld.com/zh-cn/</a></p>
+                <p>17.崩坏3 <a href="https://bh3.mihoyo.com/" target="_blank">https://bh3.mihoyo.com/</a></p>
+                <p>18.崩坏2 <a href="https://bh2.mihoyo.com/" target="_blank">https://bh2.mihoyo.com/</a></p>
+                <p>19.崩坏：星穹铁道 <a href="https://www.hoyoverse.com/zh-cn/bh3/home" target="_blank">https://www.hoyoverse.com/zh-cn/bh3/home</a></p>
+                <p>20.Apex <a href="https://www.ea.com/zh-cn/games/apex-legends" target="_blank">https://www.ea.com/zh-cn/games/apex-legends</a></p>
+                <p>21.人渣scum <a href="https://www.scum.com/zh-hans/home" target="_blank">https://www.scum.com/zh-hans/home</a></p>
+                <p>24.无人深空 <a href="https://store.steampowered.com/app/275850/No_Mans_Sky/?l=schinese" target="_blank">https://store.steampowered.com/app/275850/No_Mans_Sky/?l=schinese</a></p>
+                <p>25.地平线5 <a href="https://store.steampowered.com/app/117180/Horizon_5/?l=schinese" target="_blank">https://store.steampowered.com/app/117180/Horizon_5/?l=schinese</a></p>
+                <p>26.rust <a href="https://store.steampowered.com/app/252490/Rust/?l=schinese" target="_blank">https://store.steampowered.com/app/252490/Rust/?l=schinese</a></p>
+                <p>27.Terraria <a href="https://store.steampowered.com/app/105600/Terraria/?l=schinese" target="_blank">https://store.steampowered.com/app/105600/Terraria/?l=schinese</a></p>
+                <p>28.赛博朋克2077 <a href="https://store.steampowered.com/app/109150/Cyberpunk_2077/?l=schinese" target="_blank">https://store.steampowered.com/app/109150/Cyberpunk_2077/?l=schinese</a></p>
+                <p>29.传送门2 <a href="https://store.steampowered.com/app/48200/Transport_Fever_2/?l=schinese" target="_blank">https://store.steampowered.com/app/48200/Transport_Fever_2/?l=schinese</a></p>
+                <p>30.艾尔登法环 <a href="https://store.steampowered.com/app/1245620/_/" target="_blank">https://store.steampowered.com/app/1245620/_/</a></p>
+
+            </div>
         </div>
     </div>
-
-    <button onclick="toolbox.showModal()" class="toolbox-button">工具箱</button>
-
-    <dialog id="toolbox">
-        <div class="cancle" onclick="toolbox.close()"></div>
-        <div class="boxItems">
-            <li class="url"><a href="src/url/index.html">网址</a></li>
-            <li class="tools"><a href="src/tools/index.html">工具</a></li>
-            <li class="download"><a href="src/download/index.html">下载</a></li>
-        </div>
-    </dialog>
 
     <div class="footer">
         <p>版权所有 &copy; 2024 个人网站</p>
@@ -44,7 +422,8 @@
         <p>地址：中国·辽宁·沈阳</p>
         <style>
             .footer {
-                position: fixed;
+                position: relative;
+                margin: 0;
                 bottom: 0;
                 width: 100%;
                 height: 120px;
