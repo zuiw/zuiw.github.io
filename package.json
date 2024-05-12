@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@wuyuchentr/drag-lib": "^1.0.2",
+    "@wuyuchentr/todo-list": "^0.0.1"
+  }
+}
