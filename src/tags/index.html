@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吴宇晨`s website · 标签</title>
+    <link rel="stylesheet" href="../../index.css">
+    <script src="./script.js"></script>
+    <style>
+        :root {
+            overflow-y: scroll;
+        }
+
+        h1 {
+            position: relative;
+            top: 20px;
+            left: 48%;
+        }
+
+        .container {
+            position: relative;
+            top: 20px;
+            left: 40%;
+            width: 100%;
+        }
+
+        .lable > li {
+            height: 30px;
+            width: 100%;
+            border-radius: 5px;
+            list-style-type: none;
+            display: inline;
+        }
+
+        .lable > li > a {
+            display: block;
+            height: 30px;
+            width: 100%;
+            color: #343a40;
+            text-decoration: none;
+        }
+
+        .lable > li > a > span {
+            font-size: large;
+            line-height: 30px;
+            padding-left: 2px;
+            padding-right: 2px;
+            height: 30px;
+            padding: .5px 5px;
+            height: 30px;
+            min-height: 30px;
+            width: 100%;
+            background-color: #dadada;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+
+        .lable > li > a > span.count {
+            font-size: large;
+            background-color: #c4c4c4;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+
+        time {
+            font-size: small;
+            color: #888;
+            position: relative;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button style="position: relative; top: 20px; left: 20px;" onclick="window.location.href = '../../index.html'">返回</button>
+
+    <h1>标签</h1>
+
+    <div class="container">
+
+        <script>
+            const lable = document.createElement('ul');
+            lable.className = 'lable';
+
+            for (let tag in tags) {
+                const li = document.createElement('li');
+                li.innerHTML = `<a href="#${tag}"><span>${tag}</span><span class="count">${tags[tag].length}</span></a>`
+                lable.appendChild(li);
+                console.log(tag);
+            }
+            
+            document.getElementsByClassName('container')[0].appendChild(lable);
+
+
+            for (let tag in tags) {
+                const h2 = document.createElement('h2');
+                h2.id = tag;
+                h2.innerText = tag;
+                document.getElementsByClassName('container')[0].appendChild(h2);
+
+                const ul = document.createElement('ul');
+                ul.className = 'tag';
+                
+                for (let i = 0; i < tags[tag].length; i++) {
+                    const li = document.createElement('li');
+                    li.innerHTML = `<a href="../blog/posts/${tags[tag][i].title}.html">${tags[tag][i].title}</a><time>${tags[tag][i].date}</time>`;
+                    
+                    ul.appendChild(li);
+                }
+                
+                document.getElementsByClassName('container')[0].appendChild(ul);
+            }
+        </script>
+    </div>
+
+    <div class="footer">
+        <p>版权所有 &copy; 2024 个人网站</p>
+        <p>作者：吴宇晨</p>
+        <p>联系方式：lvyan740826@163.com</p>
+        <p>地址：中国·辽宁·沈阳</p>
+        <style>
+            .footer {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                height: 120px;
+                background-color: #ccc6c6;
+                padding: 10px;
+                text-align: center;
+                margin-top: 140px;
+            }
+            
+            .footer p {
+                margin-top: 5px;
+                margin-bottom: 5px;
+                font-size: 14px;
+            }
+        </style>
+    </div>
+</body>
+</html>
