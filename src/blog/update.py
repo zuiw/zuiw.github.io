@@ -54,6 +54,9 @@ for root, dirs, files in os.walk(post_path):
                 lines = []
 
                 for line in text_content.split("\n"):
+                    line.replace("\"", "\\\'")
+                    line.replace("'", "\\\'")
+
                     lines.append("\'" + line + "\\n\'" + "+" + "\n")
 
                 text_content = "".join(lines)
@@ -89,6 +92,7 @@ for root, dirs, files in os.walk(post_path):
     </script>
     <style>
         :root {{
+            overflow-x: hidden;
             overflow-y: scroll;
         }}
         li {{
@@ -144,6 +148,31 @@ for root, dirs, files in os.walk(post_path):
             document.querySelector(".content").innerHTML = marked({text_content});
         </script>
 
+    </div>
+
+    <div class="footer">
+        <p>版权所有 &copy; 2024 个人网站</p>
+        <p>作者：吴宇晨</p>
+        <p>联系方式：lvyan740826@163.com</p>
+        <p>地址：中国·辽宁·沈阳</p>
+        <style>
+            .footer {{
+                position: relative;
+                margin-top: 20px;
+                bottom: 0;
+                width: 100%;
+                height: 120px;
+                background-color: #ccc6c6;
+                padding: 10px;
+                text-align: center;
+            }}
+            
+            .footer p {{
+                margin-top: 5px;
+                margin-bottom: 5px;
+                font-size: 14px;
+            }}
+        </style>
     </div>
 </body>
 </html>''')
