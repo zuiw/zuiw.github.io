@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吴宇晨`s website · 归档</title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="../../index.css">
+    <style>
+        :root {
+            overflow-y: scroll;
+        }
+
+        h1 {
+            position: relative;
+            top: 20px;
+            text-align: center;
+        }
+
+        .container {
+            position: relative;
+            top: 50px;
+            left: 48%;
+        }
+
+        li {
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
+
+        time {
+            font-size: small;
+            color: #888;
+            position: relative;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button style="position: relative; top: 20px; left: 20px;" onclick="window.location.href = '../../index.html'">返回</button>
+
+    <h1>归档</h1>
+
+    <div class="container"></div>
+
+    <script>
+        const container = document.querySelector('.container');
+
+        for(let date in posts) {
+            const ul = document.createElement('ul');
+
+            ul.className = date;
+
+            const h2 = document.createElement('h2');
+            h2.textContent = date;
+
+            ul.appendChild(h2);
+            
+            for(let post in posts[date]) {
+                const li = document.createElement('li');
+
+                li.innerHTML = `<a href="../blog/posts/${posts[date][post].title}.html">${posts[date][post].title}</a><time>${posts[date][post].date}</time>`;
+                
+                ul.appendChild(li);
+            }
+
+            container.appendChild(ul);
+        }
+    </script>
+
+    <div class="footer">
+        <p>版权所有 &copy; 2024 个人网站</p>
+        <p>作者：吴宇晨</p>
+        <p>联系方式：lvyan740826@163.com</p>
+        <p>地址：中国·辽宁·沈阳</p>
+        <style>
+            .footer {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                height: 120px;
+                background-color: #ccc6c6;
+                padding: 10px;
+                text-align: center;
+                margin-top: 140px;
+            }
+            
+            .footer p {
+                margin-top: 5px;
+                margin-bottom: 5px;
+                font-size: 14px;
+            }
+        </style>
+    </div>
+</body>
+</html>

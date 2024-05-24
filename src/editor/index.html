@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吴宇晨`s website · 在线编辑器</title>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/codemirror/6.65.7/codemirror.min.js"></script>
+    <link href="https://cdn.bootcdn.net/ajax/libs/codemirror/6.65.7/codemirror.min.css" rel="stylesheet">
+
+    <link href="https://cdn.bootcdn.net/ajax/libs/codemirror/6.65.7/addon/fold/foldgutter.css" rel="stylesheet">
+    <script src="https://cdn.bootcdn.net/ajax/libs/codemirror/6.65.7/addon/fold/foldcode.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/codemirror/6.65.7/addon/fold/foldgutter.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/codemirror/6.65.7/addon/fold/brace-fold.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/codemirror/6.65.7/addon/fold/comment-fold.js"></script>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/codemirror/6.65.7/addon/edit/matchbrackets.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/codemirror/6.65.7/addon/edit/closebrackets.js"></script>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/codemirror/6.65.7/mode/clike/clike.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/codemirror/6.65.7/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/codemirror/6.65.7/mode/python/python.min.js"></script>
+
+    <link href="https://cdn.bootcdn.net/ajax/libs/codemirror/6.65.7/theme/dracula.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcdn.net/ajax/libs/codemirror/6.65.7/theme/darcula.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcdn.net/ajax/libs/codemirror/6.65.7/theme/monokai.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcdn.net/ajax/libs/codemirror/6.65.7/theme/material.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcdn.net/ajax/libs/codemirror/6.65.7/theme/material-ocean.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcdn.net/ajax/libs/codemirror/6.65.7/theme/material-palenight.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button style="position: relative; top: 20px; left: 40px; width: 80px; height: 50px; font-size: 24px; border-radius: 5px;" onclick="window.location.href = '../../index.html'">返回</button>
+
+    <h1>在线编辑器</h1>
+
+    <div class="font-size">
+        <label for="font-size-input">字体大小：</label>
+        <input type="number" id="font-size-input" value="16">
+        <button id="font-size-button">应用</button>
+    </div>
+
+    <div class="lang">
+        <label for="lang-select">语言：</label>
+        <select id="lang-select">
+            <option value="cpp">C++</option>
+            <option value="javascript">JavaScript</option>
+            <option value="python">Python</option>
+        </select>
+    </div>
+
+    <div class="theme">
+        <label for="theme-select">主题：</label>
+        <select id="theme-select">
+            <option value="dracula">Dracula</option>
+            <option value="darcula">Darcula</option>
+            <option value="monokai">Monokai</option>
+            <option value="material">Material</option>
+            <option value="material-ocean">Material Ocean</option>
+            <option value="material-palenight">Material Palenight</option>
+        </select>
+        <button id="theme-button">应用</button>
+    </div>
+
+    <textarea id="editor" name="code"></textarea>
+    <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+            lineWrapping: true,
+            indentUnit: 4,
+            smartIndent: true,
+            lineNumbers: true,
+            foldGutter: true,
+            gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+            mode: "text/x-c++src",
+            theme: "dracula",
+            matchBrackets: true,
+            closeBrackets: true,
+            autoCloseBrackets: true
+        });
+
+        var fontSizeInput = document.getElementById("font-size-input");
+        var fontSizeButton = document.getElementById("font-size-button");
+        var codeArea = document.querySelector(".CodeMirror");
+
+        fontSizeButton.addEventListener("click", function() {
+            codeArea.style.fontSize = fontSizeInput.value + "px";
+            editor.refresh();
+        })
+
+        var langSelect = document.getElementById("lang-select");
+        
+        langSelect.addEventListener("change", function() {
+            var selectedLang = langSelect.value;
+            if (selectedLang === "cpp") {
+                editor.setOption("mode", "text/x-c++src");
+            } else if (selectedLang === "javascript") {
+                editor.setOption("mode", "text/javascript");
+            } else if (selectedLang === "python") {
+                editor.setOption("mode", "text/x-python");
+            }
+        })
+        
+        var themeSelect = document.getElementById("theme-select");
+        var themeButton = document.getElementById("theme-button");
+        
+        themeButton.addEventListener("click", function() {
+            var selectedTheme = themeSelect.value;
+            editor.setOption("theme", selectedTheme);
+            editor.refresh();
+        })
+    </script>
+</body>
+</html>
