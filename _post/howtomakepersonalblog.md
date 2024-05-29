@@ -1,7 +1,8 @@
 ---
-date: 2024-05-28
+date: 2024-05-18
 title: 如何搭建个人博客
 author: 吴宇晨
+tag: web
 ---
 
 # 如何用Github Page 搭建个人博客
