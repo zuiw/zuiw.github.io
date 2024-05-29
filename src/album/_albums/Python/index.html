@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python</title>
+    <link rel="stylesheet" href="../../../../index.css">
+    <script src="../../script.js"></script>
+    <style>
+        :root {
+            overflow-y: scroll;
+        }
+
+        .post {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <button style="position: relative; top: 20px; left: 20px;" onclick="window.location.href = '../../index.html'">返回</button>
+
+    <h1 class="title">Python</h1>
+
+    <div class="posts-container" style="position: relative; top: 20px; left: 20px;">
+         <div class="posts"></div>
+
+         <script>
+            let postsContainer = document.getElementsByClassName("posts")[0];
+
+            albums['Python'] = albums['Python'].sort(function(a, b) {
+                return new Date(b.date) - new Date(a.date);
+            })
+
+            for(let post in albums['Python']) {
+                let p = albums['Python'][post];
+
+                let postDiv = document.createElement("div");
+                postDiv.className = "post";
+
+                let title = document.createElement("h2");
+                title.innerText = p.title;
+                postDiv.appendChild(title);
+
+                let date = document.createElement("div");
+                date.innerText = p.date;
+                postDiv.appendChild(date);
+
+                let author = document.createElement("div");
+                author.innerText = "作者：" + p.author;
+                postDiv.appendChild(author);
+
+                postDiv.onclick = function() {
+                    window.location.href = "./" + p.title + ".html";
+                }
+
+                postsContainer.appendChild(postDiv);
+            }
+         </script>
+    </div>
+</body>
+</html>

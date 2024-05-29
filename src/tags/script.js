@@ -1,6 +1,6 @@
 
 let tags = {};
-
+let categorys = [];
     
 if(!tags['github']){
     tags['github'] = [{
@@ -24,6 +24,27 @@ if(!tags['github']){
     }
 }
 
+if(!tags['web']){
+    tags['web'] = [{
+        date: '2024-05-23',
+        title: '用CodeMirror打造一个自己的代码编辑器',
+        tag: 'web'
+    }]
+} else {
+    if(Array.isArray(tags['web'])) {
+        tags['web'].push({
+            date: '2024-05-23',
+            title: '用CodeMirror打造一个自己的代码编辑器',
+            tag: 'web'
+        })
+    } else {
+        tags['web'] = [tags['web'], {
+            date: '2024-05-23',
+            title: '用CodeMirror打造一个自己的代码编辑器',
+            tag: 'web'
+        }]
+    }
+}
 
 if(!tags['C++']){
     tags['C++'] = [{
@@ -47,6 +68,27 @@ if(!tags['C++']){
     }
 }
 
+if(!tags['C++']){
+    tags['C++'] = [{
+        date: '2024-05-22',
+        title: 'C++20里的Hello,world!',
+        tag: 'C++'
+    }]
+} else {
+    if(Array.isArray(tags['C++'])) {
+        tags['C++'].push({
+            date: '2024-05-22',
+            title: 'C++20里的Hello,world!',
+            tag: 'C++'
+        })
+    } else {
+        tags['C++'] = [tags['C++'], {
+            date: '2024-05-22',
+            title: 'C++20里的Hello,world!',
+            tag: 'C++'
+        }]
+    }
+}
 
 if(!tags['C++']){
     tags['C++'] = [{
@@ -70,7 +112,6 @@ if(!tags['C++']){
     }
 }
 
-
 if(!tags['notice']){
     tags['notice'] = [{
         date: '2024-05-15',
@@ -92,7 +133,6 @@ if(!tags['notice']){
         }]
     }
 }
-
 
 if(!tags['web']){
     tags['web'] = [{
@@ -116,7 +156,6 @@ if(!tags['web']){
     }
 }
 
-
 if(!tags['Python']){
     tags['Python'] = [{
         date: '2024-05-20',
@@ -139,3 +178,24 @@ if(!tags['Python']){
     }
 }
 
+if(!tags['npm']){
+    tags['npm'] = [{
+        date: '2024-05-26',
+        title: '上传npm包',
+        tag: 'npm'
+    }]
+} else {
+    if(Array.isArray(tags['npm'])) {
+        tags['npm'].push({
+            date: '2024-05-26',
+            title: '上传npm包',
+            tag: 'npm'
+        })
+    } else {
+        tags['npm'] = [tags['npm'], {
+            date: '2024-05-26',
+            title: '上传npm包',
+            tag: 'npm'
+        }]
+    }
+}

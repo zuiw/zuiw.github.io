@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+                            
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python · Python专辑</title>                 
+    <link rel="stylesheet" href="../../../../index.css">
+    <script src="../../script.js"></script>
+    
+    <script src="https://cdn.bootcss.com/marked/0.8.1/marked.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css">
+</head>
+
+<body>
+    <button style="position: relative; top: 20px; left: 20px;" onclick="window.location.href = './index.html'">返回</button>
+
+    <div class="main">
+        <div class="title">Python专辑</div>
+        <div class="date">2024-05-28</div>
+        <div class="author">吴宇晨</div>
+        <div class="content">
+
+        <script>
+            marked.setOptions({
+                gfm: true,
+                breaks: true,
+                highlight: function (code) {
+                    return hljs.highlightAuto(code).value;
+                }
+            });
+
+            document.getElementsByClassName("content")[0].innerHTML = marked(albums['Python'].content);
+        </script>
+    </div>
+</body>
+</html>

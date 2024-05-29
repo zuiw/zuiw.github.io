@@ -54,10 +54,14 @@ for root, dirs, files in os.walk(post_path):
                 lines = []
 
                 for line in text_content.split("\n"):
-                    line.replace("\"", "\\\'")
-                    line.replace("'", "\\\'")
+                    line = line.replace("\\", "\\\\")
+                    line = line.replace("\'", "\\\'")
+                    line = line.replace("\"", "\\\"")
 
-                    lines.append("\'" + line + "\\n\'" + "+" + "\n")
+                    line = line.replace("<script", "\\x3Cscript")
+                    line = line.replace("</script>", "\\x3C/script>")
+
+                    lines.append("\"" + line + "\\n\"" + "+" + "\n")
 
                 text_content = "".join(lines)
 
@@ -67,7 +71,7 @@ for root, dirs, files in os.walk(post_path):
 
                 with open(script_path, "a", encoding="utf-8") as f:
                     
-                    f.write(f'''posts.push({{\n\tdate: '{date}', \n\ttitle: '{title}', \n\tauthor: '{author}', \n\tcontent: marked({text_content})\n}});\n\n''')
+                    f.write(f'''posts.push({{\n\tdate: '{date}', \n\ttitle: '{title}', \n\tauthor: '{author}', \n\tcontent: {text_content}\n}});\n\n''')
                     
                     print(f"{file_path} 更新成功")
 
@@ -125,6 +129,10 @@ for root, dirs, files in os.walk(post_path):
             padding: 10px;
             border-radius: 10px;
             text-align: left;
+        }}
+
+        pre code {{
+            font-family: Consolas, Monaco, monospace;
         }}
     </style>
 </head>

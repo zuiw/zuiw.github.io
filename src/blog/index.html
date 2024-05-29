@@ -11,9 +11,10 @@
     <script src="./script.js"></script>
     <style>
         :root {
+            overflow-x: hidden;
             overflow-y: scroll;
         }
-
+  
         .post {
             margin-bottom: 20px;
             padding: 10px;
@@ -26,7 +27,7 @@
     </style>
 </head>
 <body>
-    <button style="position: relative; top: 20px; left: 20px;" onclick="window.location.href = '../../index.html'">返回</button>
+    <button style="position: relative; top: 20px; left: 20px;" onclick="window.location.href = '../../index.html'">返回</button> 
 
     <h1 style="position: relative; top: 20px; left: 20px; text-align: center;">博客</h1>
 
@@ -40,7 +41,7 @@
             posts = posts.sort(function(a, b) {
                 return new Date(b.date) - new Date(a.date);
             });
-                        
+
             for (let i = 0; i < posts.length; i++) {
                 
                 let post = document.createElement("div");

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
                             
-    <title>解决打不开github的问题</title>
+    <title>上传npm包</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../index.css">
     <script src="../script.js"></script>
@@ -59,8 +59,8 @@
     <button style="position: relative; top: 20px; left: 20px;" onclick="window.location.href = '../index.html'">返回</button>
 
     <div class="main">
-        <div class="title">解决打不开github的问题</div>
-        <div class="date">2024-05-18</div>
+        <div class="title">上传npm包</div>
+        <div class="date">2024-05-26</div>
         <div class="author">吴宇晨</div>
         <div class="content"></div>
         <script>
@@ -74,43 +74,90 @@
 
             document.querySelector(".content").innerHTML = marked("\n"+
 "\n"+
-"因为github的服务器在外国，所以有时候打不开github，解决办法有两个\n"+
+"今天我来教大家怎么创建一个自己的npm包。\n"+
 "\n"+
-"1. 修改hosts文件\n"+
-"2. 刷新DNS缓存\n"+
+"## 1.创建一个npm账号\n"+
 "\n"+
-"## 修改hosts文件\n"+
+"打开[npm官网](https://www.npmjs.com/)，点击右上角的`Sign up`按钮，注册一个账号。\n"+
 "\n"+
-"在Windows系统中，hosts文件位于C:\\Windows\\System32\\drivers\\etc\\hosts\n"+
+"## 2.编写代码\n"+
 "\n"+
-"在Linux系统中，hosts文件位于/etc/hosts，即```sudo vim /etc/hosts```\n"+
-"    \n"+
-"在Mac系统中，hosts文件位于/private/etc/hosts，即```sudo vim /private/etc/hosts```\n"+
+"创建一个文件夹，例如`my-package`，在该文件夹下创建一个`index.js`文件，然后在该文件中编写代码。\n"+
 "\n"+
-"在文件末尾添加以下内容\n"+
+"例如：\n"+
 "\n"+
-"```\n"+
-"140.82.113.4 github.com\n"+
-"199.232.69.194 github.global.ssl.fastly.net\n"+
-"185.199.108.153 assets-cdn.github.com\n"+
-"185.199.109.153 assets-cdn.github.com\n"+
-"185.199.110.153 assets-cdn.github.com\n"+
-"185.199.111.153 assets-cdn.github.com\n"+
+"```js\n"+
+"// index.js\n"+
+"\n"+
+"function hello() {\n"+
+"  console.log(\'Hello, World!\');\n"+
+"}\n"+
+"\n"+
+"module.exports = hello;\n"+
 "```\n"+
 "\n"+
-"## 刷新DNS缓存\n"+
+"## 3.发布npm包\n"+
 "\n"+
-"如果修改了hosts文件，但是仍然无法访问github，可以尝试刷新DNS缓存。\n"+
+"在命令行中进入`my-package`文件夹，运行以下命令：\n"+
+"```bash\n"+
+"npm login\n"+
+"```\n"+
 "\n"+
-"在Windows系统中，可以使用命令```ipconfig /flushdns```来刷新DNS缓存。\n"+
+"然后他会打开一个网页，跟着他的指示完成注册就可以了。\n"+
 "\n"+
-"在Linux系统中，可以使用命令```sudo systemctl restart NetworkManager```来刷新DNS缓存。\n"+
+"完成后，创建一个`package.json`的文件，然后输入一下字符\n"+
 "\n"+
-"在Mac系统中，可以使用命令```sudo killall -HUP mDNSResponder```来刷新DNS缓存。\n"+
+"```json\n"+
+"{\n"+
+"  \"name\": \"my-package\", // 替换为包的名称\n"+
+"  \"version\": \"1.0.0\", // 版本号\n"+
+"  \"description\": \"My first npm package\", // 描述\n"+
+"  \"main\": \"index.js\", // 入口文件\n"+
+"  \"scripts\": {\n"+
+"    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"  // 不用管\n"+
+"  },\n"+
+"  \"keywords\": [], // 关键词\n"+
+"  \"author\": \"\", // 作者全名\n"+
+"  \"license\": \"ISC\" // 许可证\n"+
+"}\n"+
+"```\n"+
 "\n"+
-"## 参考资料\n"+
+"完成后，运行以下命令：\n"+
 "\n"+
-"[解决打不开github的问题](https://blog.csdn.net/weixin_43804496/article/details/131475204)\n");
+"```bash\n"+
+"npm publish\n"+
+"```\n"+
+"\n"+
+"## 4.安装npm包\n"+
+"\n"+
+"在命令行中运行以下命令：\n"+
+"\n"+
+"```bash\n"+
+"npm install my-package\n"+
+"```\n"+
+"\n"+
+"然后你就可以在你的代码中使用`my-package`这个包了。\n"+
+"\n"+
+"## 5.更新npm包\n"+
+"\n"+
+"当你更新了`my-package`这个包后，你可以在`package.json`中更新版本号，然后重新发布。\n"+
+"\n"+
+"## 6.删除npm包\n"+
+"\n"+
+"当你不再需要`my-package`这个包时，你可以在npm官网中删除它。\n"+
+"\n"+
+"## 7.总结\n"+
+"\n"+
+"通过以上步骤，你已经成功创建并发布了你的第一个npm包。\n"+
+"\n"+
+"---\n"+
+"\n"+
+"## 8.参考\n"+
+"\n"+
+"- [npm官网](https://www.npmjs.com/)\n"+
+"- [npm文档](https://docs.npmjs.com/)\n"+
+"- [如何创建一个npm包](https://www.npmjs.com/package/create-npm-package)\n"+
+"- [如何发布一个npm包](https://www.npmjs.com/package/publish-npm-package)\n");
         </script>
 
     </div>

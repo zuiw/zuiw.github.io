@@ -15,7 +15,7 @@ for root, dirs, files in os.walk(post_path):
     with open(script_path, 'w', encoding='utf-8') as f:
         f.write('''
 let tags = {};
-
+let categorys = [];
     ''')
 
     for file in files:
@@ -59,7 +59,6 @@ if(!tags['{tag}']){{
         }}]
     }}
 }}
-
 ''')
                     print(f'{tag} 更新成功')
 

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吴宇晨`s website · 专辑</title>
+    <link rel="stylesheet" href="../../index.css">
+    <script src="./script.js"></script>
+    <style>
+        :root {
+            overflow-y: scroll;
+        }
+
+        .album {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button style="position: relative; top: 20px; left: 20px;" onclick="window.location.href = '../../index.html'">返回</button>
+
+    <h1 style="position: relative; top: 20px; left: 20px; text-align: center;">专辑</h1>
+
+    <div class="album-container" style="position: relative; top: 20px; left: 20px">
+        <div class="albums"></div>
+
+        <script>
+            let albumsList = document.querySelector('.albums');
+            
+            albumsList.innerHTML = '';
+
+            for(let album in albums) {
+
+                let albumDiv = document.createElement('div');
+                albumDiv.classList.add('album');
+                
+                let title = document.createElement('h2');
+                title.textContent = album;
+                albumDiv.appendChild(title);
+
+                let count = document.createElement('p');
+                count.textContent = `${albums[album].length} 篇`;
+                albumDiv.appendChild(count);
+
+                albumDiv.onclick = () => {
+                    window.location.href = `./_albums/${album}/index.html`;
+                }
+
+                albumsList.appendChild(albumDiv);
+            }
+        </script>
+    </div>
+</body>
+</html>

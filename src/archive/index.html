@@ -38,7 +38,7 @@
 </head>
 <body>
     <button style="position: relative; top: 20px; left: 20px;" onclick="window.location.href = '../../index.html'">返回</button>
-
+    
     <h1>归档</h1>
 
     <div class="container"></div>
@@ -55,6 +55,10 @@
             h2.textContent = date;
 
             ul.appendChild(h2);
+
+            posts[date] = posts[date].sort(function(a, b) {
+                return new Date(b.date) - new Date(a.date);
+            })
             
             for(let post in posts[date]) {
                 const li = document.createElement('li');

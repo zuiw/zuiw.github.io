@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+                            
+    <title>C++20里的Hello,world!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../index.css">
+    <script src="../script.js"></script>
+    <script src="https://cdn.bootcss.com/marked/0.8.1/marked.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css">
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+    <style>
+        :root {
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+        li {
+             list-style: none;
+        }
+
+        .date {
+            position: relative;
+            top: 20px;
+            left: 48%;
+            font-size: 22px;
+        }
+
+        .author {
+            position: relative;
+            top: 20px;
+            left: 48%;
+            font-size: 22px;
+        }
+
+        pre {
+            position: relative;
+            top: 20px;
+            left: 20px;
+            width: 100%;
+            height: 90%;
+            font-size: 20px;
+            background-color: #282a36;
+            color: #f8f8f2;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        pre code {
+            font-family: Consolas, Monaco, monospace;
+        }
+    </style>
+</head>
+<body>
+    <button style="position: relative; top: 20px; left: 20px;" onclick="window.location.href = '../index.html'">返回</button>
+
+    <div class="main">
+        <div class="title">C++20里的Hello,world!</div>
+        <div class="date">2024-05-22</div>
+        <div class="author">吴宇晨</div>
+        <div class="content"></div>
+        <script>
+            marked.setOptions({
+                gfm: true,
+                breaks: true,
+                highlight: function (code) {
+                    return hljs.highlightAuto(code).value;
+                }
+            });
+
+            document.querySelector(".content").innerHTML = marked("\n"+
+"\n"+
+"C++ 语言为了保持与 C 语言的兼容性，在语法层面上曾经尽力保持 C-like。但随着越来越多内容被加入到 C++ 中，这一要求也越来越难以实现。最终，C++11 标准的发布彻底改变了 C++ 语言的面貌，其改变之大甚至让 C++11 看起来像一门全新的语言。因此，多把 C++11 后的 C++ 称为“Modern C++”。\n"+
+"\n"+
+"而 C++20 则是在 C++11 之后发布的，它引入了更多的 C++ 特性，并致力于让 C++ 语言更加易用。\n"+
+"\n"+
+"## 你好，世界！\n"+
+"\n"+
+"```cpp\n"+
+"// Hello from C++20\n"+
+"\n"+
+"import <iostream>;\n"+
+"using std::cout, std::endl;\n"+
+"\n"+
+"auto main() -> int {\n"+
+"    cout << \"Hello, world!\" << endl;\n"+
+"\n"+
+"    int answer {42};\n"+
+"    \n"+
+"    cout << \"21 + 21 = \"\n"+
+"         << answer << endl;\n"+
+"}\n"+
+"\n"+
+"```\n"+
+"\n"+
+"### 如何编译\n"+
+"\n"+
+"这里只有Windows x64版本的，其他版本请自行编译。\n"+
+"\n"+
+"首先得保证有最新的Clang编译器，如果没有，[点击这里](https://github.com/llvm/llvm-project/releases/download/llvmorg-16.0.0/LLVM-16.0.0-win64.exe)下载安装。\n"+
+"\n"+
+"然后打开命令行，输入以下命令：\n"+
+"\n"+
+"```sh\n"+
+"clang++ -std=c++20 -o hello.exe hello.cpp\n"+
+"```\n"+
+"\n"+
+"### 编译器选项\n"+
+"\n"+
+"- `-std=c++20` 表示使用C++20标准编译\n"+
+"\n"+
+"- `-o hello.exe` 表示将编译后的文件命名为hello.exe\n"+
+"\n"+
+"### 运行\n"+
+"\n"+
+"在命令行输入以下命令：\n"+
+"\n"+
+"```sh\n"+
+"hello.exe\n"+
+"```\n"+
+"\n"+
+"### 输出\n"+
+"\n"+
+"```cmd\n"+
+"Hello, world!\n"+
+"21 + 21 = 42\n"+
+"```\n"+
+"\n"+
+"### 有什么改变\n"+
+"\n"+
+"为第一个 C++20 程序，它看起来还是相当地不一样的。\n"+
+"\n"+
+"首先注意到的就是 import 语句。C++20 引入了`模块` (Module) 机制，彻底（至少是在理论上）宣告了使用头文件+实现文件组织多文件代码历史的终结。\n"+
+"\n"+
+"然而，目前各大编译器对模块机制的支持都不甚完善。为了让代码至少看上去在使用这个新特性，我们使用一种称为`模块映射` (Module Mapping)的机制。这种机制可以将头文件映射为模块。目前我还没有深究模块机制的具体内容，因此这里只是这样用来让代码能跑起来而已。Clang为 libc++ 标准库提供了模块映射，因此只需 import <header>，其中 header 为标准库的头文件名，即可导入对应的头文件映射成的模块。\n"+
+"\n"+
+"Clang 也定义了一个模块 std，其包含了整个 C++ 标准库。为了方便兼容更早的版本，我在学习过程中将不会直接导入 std 模块，而是导入各头文件映射的模块。\n"+
+"\n"+
+"接下来，注意到一个长得很奇怪的变量定义语句。这是 C++11 引入的`通用初始化` (Universal Initialization，或称 Brace-init) 机制，旨在提供一种统一、安全的初始化方式。具体来说，在 C++11 前，有许多方式都可以初始化一个变量：\n"+
+"\n"+
+"```cpp\n"+
+"int n = 0;\n"+
+"Point p = {0, 1};\n"+
+"double f(3.14);\n"+
+"char s1[] = {\'H\', \'e\', \'l\' ,\'l\', \'o\', \'\\0\'};\n"+
+"```\n"+
+"\n"+
+"而 C++11 之后，则统一使用花括号来初始化变量：\n"+
+"\n"+
+"```cpp\n"+
+"int n {0};\n"+
+"Point p {0, 1};\n"+
+"double f {3.14};\n"+
+"char s1[] {\'H\', \'e\', \'l\' ,\'l\', \'o\', \'\\0\'};\n"+
+"// 直接指定 vector 内容；这在以前是无法实现的\n"+
+"std::vector<std::string> v {\"Alpha\", \"Beta\", \"Gamma\"};\n"+
+"```\n"+
+"\n"+
+"这种机制的优点在于，它统一了初始化的语法，使得初始化过程更加清晰。\n"+
+"\n"+
+"同时，通用初始化还加强了安全检查。例如：\n"+
+"\n"+
+"```cpp\n"+
+"int f = 1145141919810;\n"+
+"```\n"+
+"\n"+
+"在 C++11 之前，上述代码是合法的。但在 C++11 之后，编译器会报错，因为 1145141919810 超过了 int 类型的取值范围。\n"+
+"\n"+
+"```cpp\n"+
+"int f {1145141919810};\n"+
+"```\n"+
+"\n"+
+"在 C++11 之后，上述代码则会报错，因为 1145141919810 超过了 int 类型的取值范围。\n"+
+"\n"+
+"再然后，你可能会注意到，这里的main函数的返回类型是`auto`，但标注成了`int`。这是 C++17 引入的`auto`机制。\n"+
+"\n"+
+"在 C++17 之前，函数的返回类型只能使用`void`、`int`、`double`等基本类型。而在 C++17 之后，函数的返回类型也可以使用`auto`，表示返回类型由编译器自行推断。\n"+
+"\n"+
+"```cpp\n"+
+"auto main() -> int {\n"+
+"    // ...\n"+
+"}\n"+
+"```\n"+
+"\n"+
+"## 参考资料\n"+
+"\n"+
+"[来自 C++20 的 \"Hello, world!\"](https://zhuanlan.zhihu.com/p/463682667)\n"+
+"\n");
+        </script>
+
+    </div>
+
+    <div class="footer">
+        <p>版权所有 &copy; 2024 个人网站</p>
+        <p>作者：吴宇晨</p>
+        <p>联系方式：lvyan740826@163.com</p>
+        <p>地址：中国·辽宁·沈阳</p>
+        <style>
+            .footer {
+                position: relative;
+                margin-top: 20px;
+                bottom: 0;
+                width: 100%;
+                height: 120px;
+                background-color: #ccc6c6;
+                padding: 10px;
+                text-align: center;
+            }
+            
+            .footer p {
+                margin-top: 5px;
+                margin-bottom: 5px;
+                font-size: 14px;
+            }
+        </style>
+    </div>
+</body>
+</html>

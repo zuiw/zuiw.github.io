@@ -137,4 +137,21 @@ if(!posts['2024']) {
             title: 'Python链式调用：优雅的编程风格'
         }];
     }
+}if(!posts['2024']) {
+    posts['2024'] = {
+        date: '2024-05-26',
+        title: '上传npm包'
+    };
+} else {
+    if(Array.isArray(posts['2024'])) {
+        posts['2024'].push({
+            date: '2024-05-26',
+            title: '上传npm包'
+        });
+    } else {
+        posts['2024'] = [posts['2024'], {
+            date: '2024-05-26',
+            title: '上传npm包'
+        }];
+    }
 }
