@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://zuiw.github.io/</loc>
+  <lastmod>2024-05-30T09:18:29+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://zuiw.github.io/src/projects/index.html</loc>
+  <lastmod>2024-05-30T09:18:29+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zuiw.github.io/src/blog/index.html</loc>
+  <lastmod>2024-05-30T09:18:29+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zuiw.github.io/src/tags/index.html</loc>
+  <lastmod>2024-05-30T09:18:29+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zuiw.github.io/src/archive/index.html</loc>
+  <lastmod>2024-05-30T09:18:29+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zuiw.github.io/src/about/index.html</loc>
+  <lastmod>2024-05-30T09:18:29+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zuiw.github.io/src/album/index.html</loc>
+  <lastmod>2024-05-30T09:18:29+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zuiw.github.io/src/editor/index.html</loc>
+  <lastmod>2024-05-30T09:18:29+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zuiw.github.io/src/url/index.html</loc>
+  <lastmod>2024-05-30T09:18:29+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zuiw.github.io/src/download/index.html</loc>
+  <lastmod>2024-05-30T09:18:29+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://zuiw.github.io/src/projects/drag-lib/index.html</loc>
+  <lastmod>2024-05-30T09:18:29+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://zuiw.github.io/src/projects/todo-list-lib/index.html</loc>
+  <lastmod>2024-05-30T09:18:29+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
